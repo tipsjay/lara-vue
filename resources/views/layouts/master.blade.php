@@ -10,7 +10,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+  <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> -->
+
   <title>Lara-Vue</title>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
      <link rel="stylesheet" href="/css/app.css">
   <!-- Font Awesome Icons -->
   <!-- <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css"> -->
@@ -19,10 +23,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font: Source Sans Pro -->
   <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet"> -->
 
-
 </head>
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
+<div class="wrapper" id="app">
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -86,13 +89,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="/dashboard" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                   Dashboard
                
               </p>
-            </a>
+            </router-link>
           </li>
 
           <li class="nav-item has-treeview">
@@ -119,12 +122,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="/profile" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
                   Profile
               </p>
-            </a>
+            </router-link>
           </li>
 
           <li class="nav-item">
@@ -150,7 +153,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content">
       <div class="container-fluid">
        
-        <!-- /.row -->
+            <router-view></router-view>
+       
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
@@ -169,17 +173,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </div>
 <!-- ./wrapper -->
 
-<script src="/js/app.js"></script>
-
-<!-- REQUIRED SCRIPTS -->
-
-<!-- jQuery -->
-<!-- <script src="plugins/jquery/jquery.min.js"></script> -->
-<!-- Bootstrap 4 -->
-<!-- <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-<!-- AdminLTE App -->
-<!-- <script src="dist/js/adminlte.min.js"></script> -->
-
-
+  <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>
