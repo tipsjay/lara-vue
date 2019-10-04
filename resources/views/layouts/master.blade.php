@@ -41,7 +41,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a href="#" class="nav-link">Contact</a>
       </li>
     </ul>
-
+     
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
@@ -86,7 +86,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-
+           
 
           <li class="nav-item">
             <router-link to="/dashboard" class="nav-link">
@@ -173,6 +173,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </div>
 <!-- ./wrapper -->
 
-  <script src="{{asset('js/app.js')}}"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
